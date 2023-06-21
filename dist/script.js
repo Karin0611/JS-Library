@@ -31,6 +31,27 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.accordion = function () 
 
 /***/ }),
 
+/***/ "./src/js/lib/components/dropdown.js":
+/*!*******************************************!*\
+  !*** ./src/js/lib/components/dropdown.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
+
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.dropdown = function () {
+  for (let i = 0; i < this.length; i++) {
+    const id = this[i].getAttribute('id');
+    (0,_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).click(() => {
+      (0,_core__WEBPACK_IMPORTED_MODULE_0__["default"])(`[data-toggle-id="${id}"]`).fadeToggle(300);
+    });
+  }
+};
+(0,_core__WEBPACK_IMPORTED_MODULE_0__["default"])('.dropdown-toggle').dropdown();
+
+/***/ }),
+
 /***/ "./src/js/lib/core.js":
 /*!****************************!*\
   !*** ./src/js/lib/core.js ***!
@@ -102,10 +123,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_display__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/display */ "./src/js/lib/modules/display.js");
 /* harmony import */ var _modules_classes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/classes */ "./src/js/lib/modules/classes.js");
 /* harmony import */ var _modules_handlers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/handlers */ "./src/js/lib/modules/handlers.js");
-/* harmony import */ var _modules_attribute__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/attribute */ "./src/js/lib/modules/attribute.js");
-/* harmony import */ var _modules_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/actions */ "./src/js/lib/modules/actions.js");
-/* harmony import */ var _modules_effects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/effects */ "./src/js/lib/modules/effects.js");
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/accordion */ "./src/js/lib/components/accordion.js");
+/* harmony import */ var _modules_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/actions */ "./src/js/lib/modules/actions.js");
+/* harmony import */ var _modules_effects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/effects */ "./src/js/lib/modules/effects.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/accordion */ "./src/js/lib/components/accordion.js");
+/* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/lib/components/dropdown.js");
 
 
 
@@ -208,55 +229,6 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.siblings = function () {
   const objLength = Object.keys(this).length;
   for (; numberOfItems < objLength; numberOfItems++) {
     delete this[numberOfItems];
-  }
-  return this;
-};
-
-/***/ }),
-
-/***/ "./src/js/lib/modules/attribute.js":
-/*!*****************************************!*\
-  !*** ./src/js/lib/modules/attribute.js ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
-
-_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.getAtt = function (name) {
-  if (!name) {
-    return this;
-  }
-  for (let i = 0; i < this.length; i++) {
-    this[i].getAttribute(name);
-  }
-  return this;
-};
-_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.setAtt = function (name, value) {
-  if (!name || !value) {
-    return this;
-  }
-  for (let i = 0; i < this.length; i++) {
-    this[i].setAttribute(name, value);
-  }
-  return this;
-};
-_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.removeAtt = function (name) {
-  if (!name) {
-    return this;
-  }
-  for (let i = 0; i < this.length; i++) {
-    this[i].removeAttribute(name);
-  }
-  return this;
-};
-_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.toggleAtt = function (name, value) {
-  for (let i = 0; i < this.length; i++) {
-    if (this[i].hasAttribute(name)) {
-      this[i].removeAttribute(name);
-    } else {
-      this[i].setAttribute(name, value);
-    }
   }
   return this;
 };
@@ -388,6 +360,16 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeOut = function (dur,
   }
   return this;
 };
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeToggle = function (dur, display, fin) {
+  for (let i = 0; i < this.length; i++) {
+    if (window.getComputedStyle(this[i]).display === 'none') {
+      (0,_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).fadeIn(dur, display, fin);
+    } else {
+      (0,_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).fadeOut(dur, display, fin);
+    }
+  }
+  return this;
+};
 
 /***/ }),
 
@@ -496,13 +478,26 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/lib */ "./src/js/lib/lib.js");
 
-(0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').on('click', function () {
-  (0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(1).toggleClass('active');
+(0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('#first').on('click', () => {
+  (0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(1).fadeToggle(1800);
 });
-(0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').click(function () {
-  console.log((0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])(this).index());
+(0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-count="second"]').on('click', () => {
+  (0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(2).fadeToggle(1800);
 });
-(0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.findme').fadeOut(1800);
+(0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').eq(2).on('click', () => {
+  (0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.w-500').fadeToggle(1800);
+});
+(0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.wrap').html(`
+    <div class="dropdown">
+       <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">Dropdown button</button>
+       <div class="dropdown-menu" data-toggle-id="dropdownMenuButton">
+            <a class="dropdown-item" href="">Action</a>
+            <a class="dropdown-item" href="">Action #2</a>
+            <a class="dropdown-item" href="">Action #3</a>
+        </div>
+    </div>
+    `);
+(0,_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.dropdown-toggle').dropdown();
 })();
 
 /******/ })()
