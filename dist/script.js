@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/js/lib/components/accordion.js":
@@ -8,6 +7,7 @@
   \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
 
@@ -37,6 +37,7 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.accordion = function () 
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
 
@@ -52,12 +53,23 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.dropdown = function () {
 
 /***/ }),
 
+/***/ "./src/js/lib/components/modal.js":
+/*!****************************************!*\
+  !*** ./src/js/lib/components/modal.js ***!
+  \****************************************/
+/***/ (() => {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\cbvc\\udemy\\jsLib\\src\\js\\lib\\components\\modal.js: Identifier 'buttons' has already been declared. (38:43)\n\n\u001b[0m \u001b[90m 36 |\u001b[39m $(\u001b[32m'[data-toggle=\"modal\"]'\u001b[39m)\u001b[33m.\u001b[39mmodal()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 37 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m $\u001b[33m.\u001b[39mprototype\u001b[33m.\u001b[39mcreateModal \u001b[33m=\u001b[39m \u001b[36mfunction\u001b[39m ({text\u001b[33m,\u001b[39m buttons} \u001b[33m=\u001b[39m {}) {\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mlet\u001b[39m modal \u001b[33m=\u001b[39m document\u001b[33m.\u001b[39mcreateElement(\u001b[32m'div'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 40 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 41 |\u001b[39m     modal\u001b[33m.\u001b[39mclassList\u001b[33m.\u001b[39madd(\u001b[32m'modal'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n    at instantiate (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:63:32)\n    at constructor (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:358:12)\n    at Parser.raise (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:3255:19)\n    at ScopeHandler.checkRedeclarationInScope (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:1528:19)\n    at ScopeHandler.declareName (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:1511:14)\n    at Parser.declareNameFromIdentifier (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:7511:16)\n    at Parser.checkIdentifier (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:7507:12)\n    at Parser.checkLVal (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:7446:12)\n    at Parser.checkLVal (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:7477:14)\n    at Parser.checkLVal (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:7477:14)\n    at Parser.checkLVal (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:7477:14)\n    at Parser.checkParams (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:11980:12)\n    at Parser.<anonymous> (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:11955:14)\n    at Parser.parseBlockOrModuleBlockBody (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:13202:23)\n    at Parser.parseBlockBody (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:13178:10)\n    at Parser.parseBlock (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:13166:10)\n    at Parser.parseFunctionBody (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:11947:24)\n    at Parser.parseFunctionBodyAndFinish (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:11933:10)\n    at D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:13316:12\n    at Parser.withSmartMixTopicForbiddingContext (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:12257:14)\n    at Parser.parseFunction (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:13315:10)\n    at Parser.parseFunctionOrFunctionSent (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:11412:17)\n    at Parser.parseExprAtom (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:11185:21)\n    at Parser.parseExprSubscripts (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:10890:23)\n    at Parser.parseUpdate (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:10873:21)\n    at Parser.parseMaybeUnary (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:10849:23)\n    at Parser.parseMaybeUnaryOrPrivate (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:10687:61)\n    at Parser.parseExprOps (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:10692:23)\n    at Parser.parseMaybeConditional (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:10669:23)\n    at Parser.parseMaybeAssign (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:10630:21)\n    at Parser.parseMaybeAssign (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:10656:25)\n    at Parser.parseExpressionBase (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:10584:23)\n    at D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:10580:39\n    at Parser.allowInAnd (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:12275:16)\n    at Parser.parseExpression (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:10580:17)\n    at Parser.parseStatementContent (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:12733:23)\n    at Parser.parseStatementLike (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:12584:17)\n    at Parser.parseModuleItem (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:12561:17)\n    at Parser.parseBlockOrModuleBlockBody (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:13185:36)\n    at Parser.parseBlockBody (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:13178:10)\n    at Parser.parseProgram (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:12460:10)\n    at Parser.parseTopLevel (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:12450:25)\n    at Parser.parse (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:14347:10)\n    at parse (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\parser\\lib\\index.js:14388:38)\n    at parser (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\core\\lib\\parser\\index.js:41:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:64:38)\n    at normalizeFile.next (<anonymous>)\n    at run (D:\\cbvc\\udemy\\jsLib\\node_modules\\@babel\\core\\lib\\transformation\\index.js:21:50)\n    at run.next (<anonymous>)");
+
+/***/ }),
+
 /***/ "./src/js/lib/core.js":
 /*!****************************!*\
   !*** ./src/js/lib/core.js ***!
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -115,6 +127,7 @@ window.$ = $;
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -127,6 +140,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_effects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/effects */ "./src/js/lib/modules/effects.js");
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/accordion */ "./src/js/lib/components/accordion.js");
 /* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/lib/components/dropdown.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/modal */ "./src/js/lib/components/modal.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
@@ -145,6 +161,7 @@ __webpack_require__.r(__webpack_exports__);
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
 
@@ -241,6 +258,7 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.siblings = function () {
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
 
@@ -271,6 +289,7 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.toggleClass = function (
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
 
@@ -314,6 +333,7 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.toggle = function () {
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
 
@@ -379,6 +399,7 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeToggle = function (d
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
 
@@ -440,6 +461,18 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.click = function (handle
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -470,8 +503,9 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.click = function (handle
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
