@@ -9,6 +9,7 @@ import './components/dropdown';
 import './components/modal';
 import './components/tab';
 import './services/requests';
+import './components/carousel';
 
 export default $;
 
